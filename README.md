@@ -1,7 +1,8 @@
 # nhentai
 
 #### 使用方法
-##### 安装
+**安装**
+
 环境要求: Python Version >= 3.5
 ```
 git clone https://github.com/4cat/nhentai.git
@@ -16,14 +17,15 @@ cd nhentai
 pip install --user requirements.txt
 python run --help
 ```
-##### 下载
+**下载**
 ```
 nhentai -i 90074 -t 10 -p /home/overcat/nhentaipic -n
--i id 如果网址为 https://nhentai.net/g/90074/, 那么 90074 就是 id
+-i id 如果连接为 https://nhentai.net/g/90074/, 那么 90074 就是 id
 -t threads threads 为线程数，默认为 5，一般不用改
 -p dir_path 保存图片的文件夹，如果不指明，程序会在当前文件夹下新建一个以 id 命名的文件夹保存图片和 PDF
 -n 如果加上这个会将图片打包成 PDF 文件
 ```
+**帮助信息**
 ```
 Usage: nhentai [OPTIONS]
 
