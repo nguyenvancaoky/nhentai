@@ -33,10 +33,10 @@ class PictureDownloader(object):
         task = asyncio.wait([self.print_progress(picture_id)
                              for picture_id in range(1, self.pictures_num + 1)])
         loop.run_until_complete(task)
+        print("Pictures saved in:", self.saved_path)
 
     def __del__(self):
         self.progress_bar.close()
-        print("Pictures saved in:", self.saved_path)
 
 
 if __name__ == '__main__':

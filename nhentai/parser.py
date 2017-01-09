@@ -1,24 +1,11 @@
 from urllib.request import Request, urlopen
 from lxml import etree
 
-import os
-import os.path
 nhentai_url = 'https://nhentai.net/g/{}/'
 headers = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 \
     (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 }
-
-
-def get_save_path(path, id):
-    if path == None:
-        cwd = os.getcwd()
-        path = os.path.join(cwd, str(id))
-        if not os.path.exists(path):
-            os.mkdir(path)
-    if not os.path.exists(path):
-        os.mkdir(path)
-    return path
 
 
 def get_pictures_info(id):
@@ -34,7 +21,7 @@ def get_pictures_info(id):
     print("Title:\n" + title1 + "\n" + title2)
     print("Total pages:", total_pages)
     print("Pictures id:", pictures_id)
-    return pictures_id, total_pages
+    return pictures_id, total_pages, title1
 
 if __name__ == '__main__':
     get_pictures_info(90074)
