@@ -1,5 +1,5 @@
 # nhentai
-
+[![Build Status](https://travis-ci.org/4cat/nhentai.svg?branch=master)](https://travis-ci.org/4cat/nhentai)
 #### 使用方法
 **安装**
 
