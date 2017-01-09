@@ -11,7 +11,7 @@ from nhentai.utils import get_save_path, make_pdf
 @click.option('--path', '-p',
               help="Where do you want to keep it? If you do not specify a location, it will create a new folder in the current folder, and save the files in it.")
 @click.option('--threads', '-t', default=5, type=click.IntRange(1, 20))
-def main(id, threads, path, needpdf):
+def cli(id, threads, path, needpdf):
     """nhentai downloader"""
     pictures_id, total_pages, pictures_name = get_pictures_info(id)
     path = get_save_path(path, id)
@@ -23,4 +23,4 @@ def main(id, threads, path, needpdf):
 
 
 if __name__ == '__main__':
-    main()
+    cli(90074, 10, None, False)
