@@ -1,3 +1,4 @@
+import os
 import aiohttp
 import asyncio
 from tqdm import tqdm
@@ -15,7 +16,7 @@ class PictureDownloader(object):
 
     async def fetch_async(self, picture_id):
         async with aiohttp.get(self.URL.format(picture_id)) as r:
-            with open("{}/{}.jpg".format(self.saved_path, picture_id), 'wb') as fd:
+            with open(os.path.join(self.saved_path, str(picture_id) + '.jpg'), 'wb') as fd:
                 while True:
                     chunk = await r.content.read(10)
                     if not chunk:
