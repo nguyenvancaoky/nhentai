@@ -2,7 +2,6 @@ import click
 from nhentai.downloader import PictureDownloader
 from nhentai.parser import get_pictures_info
 from nhentai.utils import get_save_path, make_pdf
-import time
 
 
 @click.command()
