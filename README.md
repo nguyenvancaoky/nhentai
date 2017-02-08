@@ -5,14 +5,14 @@
 
 环境要求: Python Version >= 3.5
 ```
-git clone https://github.com/4cat/nhentai.git
+git clone https://github.com/overcat/nhentai.git
 cd nhentai
 python setup.py install
 nhentai --help
 ```
 如果你不想安装也可以
 ```
-git clone https://github.com/4cat/nhentai.git
+git clone https://github.com/overcat/nhentai.git
 cd nhentai
 pip install --user requirements.txt
 python run --help
